@@ -30,6 +30,8 @@ public class ProductController {
 	@RequestMapping(path="create", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Product> createProduct(@RequestBody Product productReq){
 		Product newP=service.save(productReq);
+		String str="Hello World.................................";
+		System.out.println(str);
 		return new ResponseEntity<Product>(newP,HttpStatus.CREATED);
 	}
 	
